@@ -53,6 +53,7 @@
 // }
 
 // export default App;
+
 import { useState } from 'react';
 import axios from 'axios';
 import './App.css';
@@ -67,7 +68,7 @@ function App() {
     const email = e.target.email.value;
 
     try {
-      const response = await axios.post('https://garnet-tranquil-sprite.glitch.me/api/waitlist', { name, email });
+      const response = await axios.post('https://tafukut-lunch-back.vercel.app/', { name, email });
       setMessage(response.data.text);
     } catch (error) {
       setMessage('There was an error submitting your request. Please try again.');

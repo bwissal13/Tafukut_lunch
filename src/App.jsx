@@ -13,7 +13,7 @@ function App() {
     const email = e.target.email.value;
 
     try {
-      const response = await axios.post('http://localhost:5000/api/waitlist', { name, email });
+      const response = await axios.post('https://tafukut-lunch-back.vercel.app/api/waitlist', { name, email });
       setMessage(response.data.text);
     } catch (error) {
       setMessage('There was an error submitting your request. Please try again.');

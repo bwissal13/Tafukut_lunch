@@ -181,42 +181,25 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .sign__form-group > input,
-  .sign__button {
-    width: 90%;
+  * {
+    font-size: 6px;
+  }
+  .logo {
+    width: 60px;
   }
   .sign__subtitle {
-    font-size: 2rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
+  
+    font-size: 1.5rem;}
+    .slide1_paragraph-span {
+      font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
-  .sign__form-group > label {
-    padding-left: 0.5rem;
-    font-size: 1.2rem;
-  }
-  .sign__form-group > input {
-    padding: 0.8rem;
-    height: 3.5rem;
-  }
-  .sign__button {
-    height: 3.5rem;
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
-  .sign__subtitle {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
+  * {
+    font-size: 5px;
   }
   .logo {
-    width: 100px;
-    margin: 2rem;
-  }
-  .slide1_paragraph-span,
-  .message {
-    font-size: 1.5rem;
+    width: 80px;
   }
 }

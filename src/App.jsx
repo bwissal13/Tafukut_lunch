@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import axios from 'axios';
 import './App.css';
@@ -7,10 +6,20 @@ import Tafukut from './assets/TAFUKUT.svg';
 function App() {
   const [message, setMessage] = useState('');
 
+  const validateEmail = (email) => {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
+
+    if (!validateEmail(email)) {
+      setMessage('Please enter a valid email address.');
+      return;
+    }
 
     try {
       const response = await axios.post('https://tafukut-lunch-back.vercel.app/api/waitlist', { name, email });
@@ -53,4 +62,3 @@ function App() {
 }
 
 export default App;
-
